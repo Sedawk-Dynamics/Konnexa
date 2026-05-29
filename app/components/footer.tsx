@@ -9,7 +9,7 @@ export function Footer() {
         <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
           <div>
             <span className="inline-flex items-center dark:rounded-xl dark:bg-white dark:px-3 dark:py-2">
-              <Logo className="h-16" />
+              <Logo className="h-24" />
             </span>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
               {site.tagline}. End-to-end HR, digital marketing and skill development for

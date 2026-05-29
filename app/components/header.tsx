@@ -37,13 +37,13 @@ export function Header() {
           : "border-b border-transparent bg-transparent"
       }`}
     >
-      <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:px-8 lg:h-20">
+      <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8 lg:h-24">
         <a
           href="#home"
           aria-label={site.brand}
           className="inline-flex items-center dark:rounded-xl dark:bg-white dark:px-2.5 dark:py-1.5"
         >
-          <Logo className="h-10 lg:h-12" priority />
+          <Logo className="h-14 lg:h-16" priority />
         </a>
 
         <ul className="hidden items-center gap-1 lg:flex">
