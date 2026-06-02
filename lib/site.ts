@@ -13,6 +13,18 @@ export const site = {
   gst: "36AAMCK7842F1Z7",
   address:
     "H.No. 73179/1, Annapurna Road Part 2, Jagtial, Jagtial District, Telangana – 505327",
+  offices: [
+    {
+      label: "Registered Office — Jagtial",
+      address:
+        "H.No. 73179/1, Annapurna Road Part 2, Jagtial, Jagtial District, Telangana – 505327",
+    },
+    {
+      label: "Hyderabad Office",
+      address:
+        "2nd Floor, Hanuman Residency, 15/21/150/1/B, Balaji Nagar, Hyderabad",
+    },
+  ],
   instagram: "https://www.instagram.com/konnexa_innovations",
   workingHours: "Mon – Sat · 9:30 AM – 6:30 PM",
 } as const;
@@ -120,6 +132,13 @@ export type TeamMember = {
 };
 
 export const team: TeamMember[] = [
+ {
+  name: "Srikanth S",
+  role: "CEO, Recruitment & Payroll Specialist, Digital Marketing Expert, with experience in training and placing 500+ students in top MNCs.",
+  email: "srikanth@konnexainnovations.com",
+  phone: "+91 79957 89701",
+  initials: "SS",
+},
   {
     name: "Venkatesh G",
     role: "Managing Director",

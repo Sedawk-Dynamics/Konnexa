@@ -9,7 +9,6 @@ import { Icon, type IconName } from "../icons";
 const details: { icon: IconName; label: string; value: string; href?: string }[] = [
   { icon: "phone", label: "Call us", value: site.phone, href: `tel:${site.phoneRaw}` },
   { icon: "mail", label: "Email us", value: site.email, href: `mailto:${site.email}` },
-  { icon: "map", label: "Visit us", value: site.address },
   { icon: "clock", label: "Working hours", value: site.workingHours },
 ];
 
@@ -65,6 +64,24 @@ export function Contact() {
                       ) : (
                         <p className="text-base font-medium text-foreground">{d.value}</p>
                       )}
+                    </div>
+                  </div>
+                </Reveal>
+              ))}
+
+              {site.offices.map((office, i) => (
+                <Reveal key={office.label} delay={(details.length + i) * 0.08}>
+                  <div className="flex items-start gap-4">
+                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-brand/10 text-brand">
+                      <Icon name="map" className="h-6 w-6" />
+                    </span>
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-wider text-muted">
+                        {office.label}
+                      </p>
+                      <p className="text-base font-medium leading-relaxed text-foreground">
+                        {office.address}
+                      </p>
                     </div>
                   </div>
                 </Reveal>

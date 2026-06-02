@@ -66,10 +66,17 @@ export function Footer() {
           <div>
             <h3 className="text-sm font-semibold text-foreground">Get in touch</h3>
             <ul className="mt-4 space-y-3 text-sm text-muted">
-              <li className="flex items-start gap-2.5">
-                <Icon name="map" className="mt-0.5 h-4.5 w-4.5 shrink-0 text-brand" />
-                <span>{site.address}</span>
-              </li>
+              {site.offices.map((office) => (
+                <li key={office.label} className="flex items-start gap-2.5">
+                  <Icon name="map" className="mt-0.5 h-4.5 w-4.5 shrink-0 text-brand" />
+                  <span>
+                    <span className="block text-xs font-semibold uppercase tracking-wider text-foreground/80">
+                      {office.label}
+                    </span>
+                    {office.address}
+                  </span>
+                </li>
+              ))}
               <li>
                 <a href={`tel:${site.phoneRaw}`} className="flex items-center gap-2.5 hover:text-brand">
                   <Icon name="phone" className="h-4.5 w-4.5 shrink-0 text-brand" />
