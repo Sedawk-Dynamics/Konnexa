@@ -21,7 +21,7 @@ export function StructuredData() {
     taxID: site.gst,
     email: site.email,
     telephone: `+${site.phoneRaw}`,
-    sameAs: [site.instagram],
+    sameAs: [site.instagram, site.twitter, site.linkedin, site.facebook],
     contactPoint: [
       {
         "@type": "ContactPoint",

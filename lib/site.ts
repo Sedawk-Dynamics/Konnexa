@@ -26,7 +26,6 @@ export const site = {
   email: "info@konnexainnovations.com",
   phone: "+91 89190 77920",
   phoneRaw: "918919077920",
-  whatsapp: "918919077920",
   gst: "36AAMCK7842F1Z7",
   address:
     "H.No. 73179/1, Annapurna Road Part 2, Jagtial, Jagtial District, Telangana – 505327",
@@ -53,8 +52,25 @@ export const site = {
     },
   ],
   instagram: "https://www.instagram.com/konnexa_innovations",
+  twitter: "https://x.com/Konnexa_",
+  twitterHandle: "@Konnexa_",
+  linkedin: "https://www.linkedin.com/company/konnexa-innovations-pvt-ltd/",
+  facebook: "https://www.facebook.com/konnexainnovations/",
   workingHours: "Mon – Sat · 9:30 AM – 6:30 PM",
 } as const;
+
+export type SocialLink = {
+  name: string;
+  href: string;
+  icon: "instagram" | "twitter" | "linkedin" | "facebook";
+};
+
+export const socialLinks: SocialLink[] = [
+  { name: "Instagram", href: site.instagram, icon: "instagram" },
+  { name: "X (Twitter)", href: site.twitter, icon: "twitter" },
+  { name: "LinkedIn", href: site.linkedin, icon: "linkedin" },
+  { name: "Facebook", href: site.facebook, icon: "facebook" },
+];
 
 export const navLinks = [
   { label: "Home", href: "#home" },

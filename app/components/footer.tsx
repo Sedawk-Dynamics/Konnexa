@@ -1,4 +1,4 @@
-import { navLinks, services, site } from "@/lib/site";
+import { navLinks, services, site, socialLinks } from "@/lib/site";
 import { Logo } from "./logo";
 import { Icon } from "./icons";
 
@@ -15,25 +15,20 @@ export function Footer() {
               {site.tagline}. End-to-end HR, digital marketing and skill development for
               forward-thinking businesses and students.
             </p>
-            <div className="mt-5 flex gap-3">
-              <a
-                href={site.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-card-border bg-card text-foreground transition-colors hover:border-brand hover:text-brand"
-              >
-                <Icon name="instagram" className="h-4.5 w-4.5" />
-              </a>
-              <a
-                href={`https://wa.me/${site.whatsapp}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="WhatsApp"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-card-border bg-card text-foreground transition-colors hover:border-brand hover:text-brand"
-              >
-                <Icon name="whatsapp" className="h-4.5 w-4.5" />
-              </a>
+            <div className="mt-5 flex flex-wrap gap-3">
+              {socialLinks.map((s) => (
+                <a
+                  key={s.name}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={s.name}
+                  title={s.name}
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-card-border bg-card text-foreground transition-colors hover:border-brand hover:text-brand"
+                >
+                  <Icon name={s.icon} className="h-4.5 w-4.5" />
+                </a>
+              ))}
             </div>
           </div>
 

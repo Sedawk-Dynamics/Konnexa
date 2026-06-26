@@ -62,6 +62,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: titleDefault,
     description: site.description,
+    site: site.twitterHandle,
+    creator: site.twitterHandle,
   },
   // Add the actual codes once you verify your domain in each console.
   verification: {

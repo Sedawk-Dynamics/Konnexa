@@ -106,8 +106,22 @@ const paths: Record<string, React.ReactNode> = {
       <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
     </>
   ),
-  whatsapp: (
-    <path d="M3 21l1.65-4.5A8.5 8.5 0 1 1 8 19.35L3 21Zm6-12c0 4 6 6 6.5 4.5.2-.6-.5-1-1.2-1.4-.4-.2-.7-.1-1 .2-.5.6-1 .3-1.7-.3-.5-.4-1-1.1-1.2-1.6-.2-.4 0-.6.2-.9.3-.3.3-.5.2-.8-.1-.4-.5-1.3-1-1.3-.4 0-.8.4-.8 1.6Z" />
+  twitter: (
+    // X logo: two crossing diagonals from corners
+    <path
+      d="M3 3h4.2l4.8 6.4L17 3h3.6l-7.1 8.4L21.6 21h-4.2l-5.2-7-5.7 7H3l7.5-9.1L3 3Z"
+      fill="currentColor"
+      stroke="none"
+    />
+  ),
+  linkedin: (
+    <>
+      <rect x="3" y="3" width="18" height="18" rx="3" />
+      <path d="M8 10v7M8 7.5v.01M12 17v-4a2 2 0 1 1 4 0v4M12 13v4" />
+    </>
+  ),
+  facebook: (
+    <path d="M14 9h3V5h-3a4 4 0 0 0-4 4v2H7v4h3v6h4v-6h3l1-4h-4V9.5a.5.5 0 0 1 .5-.5H14Z" />
   ),
   arrowRight: <path d="M5 12h14M13 6l6 6-6 6" />,
   arrowUpRight: <path d="M7 17 17 7M8 7h9v9" />,
