@@ -91,6 +91,43 @@ body {
   box-shadow: 0 0 0 3px var(--ring);
 }
 
+/* Legal-page typography */
+.legal-prose h2 {
+  margin-top: 2.4rem;
+  margin-bottom: 0.9rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--foreground);
+}
+.legal-prose h2:first-child {
+  margin-top: 0;
+}
+.legal-prose h3 {
+  margin-top: 1.6rem;
+  margin-bottom: 0.6rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--foreground);
+}
+.legal-prose p {
+  margin: 0.8rem 0;
+}
+.legal-prose ul,
+.legal-prose ol {
+  margin: 0.8rem 0;
+  padding-left: 1.4rem;
+}
+.legal-prose ul { list-style: disc; }
+.legal-prose ol { list-style: decimal; }
+.legal-prose li { margin: 0.4rem 0; }
+.legal-prose a {
+  color: var(--brand);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.legal-prose strong { color: var(--foreground); font-weight: 600; }
+
 /* 3D flip card */
 .flip-card {
   perspective: 1400px;

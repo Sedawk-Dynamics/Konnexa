@@ -72,6 +72,14 @@ export const socialLinks: SocialLink[] = [
   { name: "Facebook", href: site.facebook, icon: "facebook" },
 ];
 
+export const legalLinks = [
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Cookie Policy", href: "/cookie-policy" },
+  { label: "Terms & Conditions", href: "/terms-and-conditions" },
+] as const;
+
+export const legalEffectiveDate = "29 May 2026";
+
 export const navLinks = [
   { label: "Home", href: "#home" },
   { label: "Services", href: "#services" },

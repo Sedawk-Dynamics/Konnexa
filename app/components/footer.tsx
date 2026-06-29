@@ -1,4 +1,5 @@
-import { navLinks, services, site, socialLinks } from "@/lib/site";
+import Link from "next/link";
+import { legalLinks, navLinks, services, site, socialLinks } from "@/lib/site";
 import { Logo } from "./logo";
 import { Icon } from "./icons";
 
@@ -88,11 +89,22 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-card-border pt-6 text-sm text-muted sm:flex-row">
-          <p>
+        <div className="mt-12 flex flex-col items-center justify-center gap-3 border-t border-card-border pt-6 sm:flex-row sm:flex-wrap sm:justify-between">
+          <p className="text-sm text-muted">
             © {new Date().getFullYear()} {site.legalName}. All rights reserved.
           </p>
-          <p>GST: {site.gst}</p>
+          <nav aria-label="Legal" className="flex flex-wrap items-center justify-center gap-2">
+            {legalLinks.map((l) => (
+              <Link
+                key={l.href}
+                href={l.href}
+                className="rounded-full border border-card-border bg-card px-3.5 py-1.5 text-xs font-medium text-muted transition-colors hover:border-brand hover:text-brand"
+              >
+                {l.label}
+              </Link>
+            ))}
+          </nav>
+          <p className="text-sm text-muted">GST: {site.gst}</p>
         </div>
       </div>
     </footer>
