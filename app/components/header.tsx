@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { navLinks, site } from "@/lib/site";
@@ -38,36 +39,36 @@ export function Header() {
       }`}
     >
       <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8 lg:h-24">
-        <a
-          href="#home"
+        <Link
+          href="/#home"
           aria-label={site.brand}
           className="inline-flex items-center dark:rounded-xl dark:bg-white dark:px-2.5 dark:py-1.5"
         >
           <Logo className="h-14 lg:h-16" priority />
-        </a>
+        </Link>
 
         <ul className="hidden items-center gap-1 lg:flex">
           {navLinks.map((link) => (
             <li key={link.href}>
-              <a
+              <Link
                 href={link.href}
                 className="relative rounded-full px-4 py-2 text-sm font-medium text-muted transition-colors hover:text-brand"
               >
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
 
         <div className="flex items-center gap-2.5">
           <ThemeToggle />
-          <a
-            href="#contact"
+          <Link
+            href="/#contact"
             className="hidden items-center gap-1.5 rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-brand/25 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-brand/30 sm:inline-flex"
           >
             Get a Quote
             <Icon name="arrowRight" className="h-4 w-4" />
-          </a>
+          </Link>
           <button
             type="button"
             aria-label="Toggle menu"
@@ -92,24 +93,24 @@ export function Header() {
             <ul className="flex flex-col gap-1 px-5 py-4">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <a
+                  <Link
                     href={link.href}
                     onClick={() => setOpen(false)}
                     className="block rounded-xl px-4 py-3 text-base font-medium text-foreground transition-colors hover:bg-background-alt hover:text-brand"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
               <li className="mt-2">
-                <a
-                  href="#contact"
+                <Link
+                  href="/#contact"
                   onClick={() => setOpen(false)}
                   className="flex items-center justify-center gap-1.5 rounded-xl bg-brand px-5 py-3 text-base font-semibold text-white"
                 >
                   Get a Quote
                   <Icon name="arrowRight" className="h-4 w-4" />
-                </a>
+                </Link>
               </li>
             </ul>
           </motion.div>

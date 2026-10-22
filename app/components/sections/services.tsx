@@ -1,9 +1,11 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { services } from "@/lib/site";
+import { services, softwareSolutions } from "@/lib/site";
 import { Reveal, StaggerGroup, staggerItem } from "../motion";
 import { Icon, type IconName } from "../icons";
+import { SolutionCard } from "../solution-card";
 
 export function Services() {
   return (
@@ -67,6 +69,40 @@ export function Services() {
             </motion.div>
           ))}
         </StaggerGroup>
+
+        {/* Software Solutions */}
+        <div id="software-solutions" className="scroll-mt-28 pt-24 sm:pt-28">
+          <Reveal className="mx-auto max-w-2xl text-center">
+            <span className="inline-block rounded-full bg-brand/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.22em] text-brand">
+              Software Solutions
+            </span>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+              Software that powers your business
+            </h2>
+            <p className="mt-4 text-base text-muted">
+              Websites, apps, HRMS, ERP and more — designed, built and supported by our team.{" "}
+              <span className="font-medium text-brand">Click a card to see the full details.</span>
+            </p>
+          </Reveal>
+
+          <StaggerGroup className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {softwareSolutions.map((solution) => (
+              <motion.div key={solution.slug} variants={staggerItem}>
+                <SolutionCard solution={solution} />
+              </motion.div>
+            ))}
+          </StaggerGroup>
+
+          <Reveal className="mt-10 text-center">
+            <Link
+              href="/software-solutions"
+              className="inline-flex items-center gap-2 rounded-full border border-brand/30 bg-brand/5 px-6 py-3 text-sm font-semibold text-brand transition-colors hover:bg-brand hover:text-white"
+            >
+              Explore all software solutions
+              <Icon name="arrowRight" className="h-4 w-4" />
+            </Link>
+          </Reveal>
+        </div>
       </div>
     </section>
   );

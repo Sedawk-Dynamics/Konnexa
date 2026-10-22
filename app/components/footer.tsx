@@ -38,9 +38,9 @@ export function Footer() {
             <ul className="mt-4 space-y-2.5">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <a href={link.href} className="text-sm text-muted transition-colors hover:text-brand">
+                  <Link href={link.href} className="text-sm text-muted transition-colors hover:text-brand">
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -51,11 +51,16 @@ export function Footer() {
             <ul className="mt-4 space-y-2.5">
               {services.slice(0, 5).map((s) => (
                 <li key={s.title}>
-                  <a href="#services" className="text-sm text-muted transition-colors hover:text-brand">
+                  <Link href="/#services" className="text-sm text-muted transition-colors hover:text-brand">
                     {s.title}
-                  </a>
+                  </Link>
                 </li>
               ))}
+              <li>
+                <Link href="/software-solutions" className="text-sm text-muted transition-colors hover:text-brand">
+                  Software Solutions
+                </Link>
+              </li>
             </ul>
           </div>
 

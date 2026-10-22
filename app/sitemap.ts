@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { legalLinks, site } from "@/lib/site";
+import { legalLinks, site, softwareSolutions } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = site.url;
@@ -22,5 +22,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.3,
   }));
 
-  return [...homeAndAnchors, ...legal];
+  const solutions: MetadataRoute.Sitemap = [
+    "/software-solutions",
+    ...softwareSolutions.map((s) => `/software-solutions/${s.slug}`),
+  ].map((path) => ({
+    url: `${base}${path}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
+  return [...homeAndAnchors, ...solutions, ...legal];
 }
