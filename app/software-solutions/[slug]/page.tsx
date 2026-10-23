@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { softwareSolutions } from "@/lib/site";
+import { softwareSolutions, technologies } from "@/lib/site";
 import { Icon, type IconName } from "@/app/components/icons";
 import { Reveal } from "@/app/components/motion";
 import { SolutionCard } from "@/app/components/solution-card";
@@ -131,7 +131,7 @@ export default async function SoftwareSolutionPage({ params }: Props) {
               Technologies we use
             </h3>
             <ul className="mt-5 flex flex-wrap justify-center gap-3">
-              {solution.techStack.map((tech) => (
+              {technologies.map((tech) => (
                 <li
                   key={tech}
                   className="rounded-full border border-card-border bg-card px-4 py-2 text-sm font-medium text-foreground"

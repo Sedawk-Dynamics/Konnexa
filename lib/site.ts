@@ -149,7 +149,6 @@ export type SoftwareSolution = {
   tags: string[];
   features: { title: string; description: string }[];
   benefits: string[];
-  techStack: string[];
 };
 
 export const softwareSolutions: SoftwareSolution[] = [
@@ -186,7 +185,6 @@ export const softwareSolutions: SoftwareSolution[] = [
       "Scales as your team grows",
       "Ongoing maintenance & support",
     ],
-    techStack: ["React", "Next.js", "Node.js", "Python", "PostgreSQL", "MongoDB"],
   },
   {
     slug: "web-development",
@@ -221,7 +219,6 @@ export const softwareSolutions: SoftwareSolution[] = [
       "Lightning-fast page loads",
       "Hosting, SSL & domain setup",
     ],
-    techStack: ["Next.js", "React", "Tailwind CSS", "WordPress", "Vercel", "Netlify"],
   },
   {
     slug: "mobile-app-development",
@@ -256,7 +253,6 @@ export const softwareSolutions: SoftwareSolution[] = [
       "Offline-ready experiences",
       "Post-launch updates & support",
     ],
-    techStack: ["React Native", "Flutter", "Kotlin", "Swift", "Firebase", "Node.js"],
   },
   {
     slug: "ecommerce-solutions",
@@ -291,7 +287,6 @@ export const softwareSolutions: SoftwareSolution[] = [
       "Coupons, offers & loyalty",
       "Marketing & SEO ready",
     ],
-    techStack: ["Shopify", "WooCommerce", "Next.js", "Razorpay", "Node.js", "PostgreSQL"],
   },
   {
     slug: "hrms-payroll-software",
@@ -326,7 +321,6 @@ export const softwareSolutions: SoftwareSolution[] = [
       "Mobile app for employees",
       "Backed by our HR experts",
     ],
-    techStack: ["React", "Next.js", "Node.js", "PostgreSQL", "Flutter", "AWS"],
   },
   {
     slug: "erp-crm-solutions",
@@ -361,9 +355,10 @@ export const softwareSolutions: SoftwareSolution[] = [
       "Cloud access from anywhere",
       "Customised to your industry",
     ],
-    techStack: ["Next.js", "Node.js", "Python", "PostgreSQL", "Odoo", "AWS"],
   },
 ];
+
+export const technologies = ["Java", "AWS Services", "Python"];
 
 export const solutionProcess = [
   {
